@@ -28,9 +28,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->middleware('auth')->name('home');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//     return view('dashboard');
+// })->name('dashboard');
 
 
 Route::resource('periods', PeriodController::class)->middleware('auth')->names('periods');
